@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>步行 #L101</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+ <link rel="stylesheet" href="map_style.css">
+</head>
+
+<body>
+    <div id="map" style="outline: solid black 1px;"></div>
+    <div class="button-container">
+        <button onclick="resetMapView()">地圖中心重置</button>
+    </div>
+
+    <div class="front-page-img1">
+        <a href="newIndex.html" target="_blank">
+＊了解更多＊
+</a>
+      </div>
+
+
+    <script src="roadData.js"></script>
+    <script>
+        var map = L.map('map').setView([25.079880401500933,121.54621660709383], 19);
+
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 18,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+
+
+
+
+
+
+        var l11 = L.polyline(l1_1, { color: "rgb(0,0,220)" }).addTo(map);
+
+        var l11_00 = L.marker( l1_1[0] ,{icon: startIcon}).addTo(map);
+        var l11_99 = L.marker( l1_1[l1_1.length-1] ,{icon: midIcon}).addTo(map);
+
+
+        function resetMapView() {
+            map.setView([25.079880401500933,121.54621660709383], 17);
+            var polyline = L.polyline(coordinates, { color: 'black' }).addTo(map);
+            console.log(coordinates);
+
+        }
+    
+        function onMapClick(e) {
+            var latlng = [e.latlng.lat, e.latlng.lng]; // 将经纬度转换为数组格式
+            
+            alert(latlng);
+
+        }
+
+        map.on('click', onMapClick);
+    </script>
+</body>
+
+</html>

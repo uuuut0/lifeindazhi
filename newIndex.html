@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>步行體驗計畫</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+    </style>
+
+</head>
+
+<body> 
+
+    <div class="container ">
+        <div class="t-container">
+            <div class="map-container" style="background-color: rgb(255, 255, 255);">
+                <div id="map" style="opacity: 60%; "></div>
+            </div>
+            <div class="piece">
+                <div class="img-div">
+                    <img src="style-image/ss1.png" alt="" srcset="">   
+
+                </div>
+            </div>
+        </div>
+
+        <div class="b-container">
+            <div class="top-bar">
+                <h1>步行體驗計畫</h1>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <h3 >體驗路線來自於大直區域活動的人</h3>
+                </div>
+                <h3 class="subtitle">透過行走，你可以體驗到這個地方、環境、建設，還有這裡發生過的活動</h3>
+                
+            
+                <p> 在這部分的大直，是特別的區域。尚未抵達劍南路美麗華周遭，也和北美館、圓山花博公園有一些距離。
+                    舊時公寓還保留原樣，社區大樓在這裡是少數，房屋建築都不高，也因為一旁是國防用地，所以顯得開闊。
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+        <script src="roadData.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
