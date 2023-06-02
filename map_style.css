@@ -1,6 +1,7 @@
 
 button {
     border: 0px;
+
 }
 
 body {
@@ -78,5 +79,5 @@ button:hover {
     display: inline-block;
   }
   .front-page-img1 a:hover {
-    border: 20px solid red;
+    border: 1px solid red;
   }

@@ -30,7 +30,7 @@
 
     <script src="roadData.js"></script>
     <script>
-        var map = L.map('map').setView([25.079880401500933,121.54621660709383], 19);
+        var map = L.map('map').setView([25.08227447707641,121.54740214347841], 16);
 
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 18,
@@ -43,14 +43,16 @@
 
 
 
-        var l11 = L.polyline(l1_1, { color: "rgb(0,0,220)" }).addTo(map);
+        var l31 = L.polyline(l3_1, { color: "rgb(0,0,220)" }).addTo(map);
 
-        var l11_00 = L.marker( l1_1[0] ,{icon: startIcon}).addTo(map);
-        var l11_99 = L.marker( l1_1[l1_1.length-1] ,{icon: midIcon}).addTo(map);
+        var l31_00 = L.marker( l3_1[0] ,{icon: startIcon}).addTo(map)
+        .bindPopup("<b>住家</b><br>大直教會附近");
+        var l31_99 = L.marker( l3_1[l3_1.length-1] ,{icon: endIcon}).addTo(map)
+        .bindPopup("<b>國小周圍長椅</b><br>等著小孩放學");
 
 
         function resetMapView() {
-            map.setView([25.079880401500933,121.54621660709383], 17);
+            map.setView([25.08227447707641,121.54740214347841], 16);
             var polyline = L.polyline(coordinates, { color: 'black' }).addTo(map);
             console.log(coordinates);
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>步行 #L101</title>
+    <title>步行 #L102</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -30,7 +30,7 @@
 
     <script src="roadData.js"></script>
     <script>
-        var map = L.map('map').setView([25.079880401500933,121.54621660709383], 19);
+        var map = L.map('map').setView([25.081065298638364,121.54620587825777], 19);
 
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 18,
@@ -43,10 +43,10 @@
 
 
 
-        var l11 = L.polyline(l1_1, { color: "rgb(0,0,220)" }).addTo(map);
+        var l12 = L.polyline(l1_2, { color: "rgb(0,0,220)" }).addTo(map);
 
-        var l11_00 = L.marker( l1_1[0] ,{icon: startIcon}).addTo(map);
-        var l11_99 = L.marker( l1_1[l1_1.length-1] ,{icon: midIcon}).addTo(map);
+        var l12_00 = L.marker( l1_2[0] ,{icon: midIcon}).addTo(map);
+        var l12_99 = L.marker( l1_2[l1_2.length-1] ,{icon: midIcon}).addTo(map);
 
 
         function resetMapView() {
